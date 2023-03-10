@@ -38,5 +38,9 @@ flutter:
     - assets/
     - assets/animations/
     - assets/documents/
+    - assets/documents/Curriculum-Nahaliel.pdf
     - assets/images/
+    - assets/images/light.png
     - assets/objects/
+    - assets/objects/profile.gltf
+    
