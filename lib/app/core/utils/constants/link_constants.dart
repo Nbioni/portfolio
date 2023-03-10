@@ -5,6 +5,6 @@ const String flutterLink = "https://flutter.dev/";
 const String curriculumNahalielLink =
     "https://raw.githubusercontent.com/Nbioni/portfolio/main/assets/documents/Curriculum-Nahaliel.pdf";
 const String avatarNahalielLink =
-    "https://github.com/Nbioni/portfolio/blob/main/assets/objects/profile.gltf?raw=true";
+    "https://raw.githubusercontent.com/Nbioni/portfolio/main/assets/objects/profile.gltf";
 const String modelViewerEnvironmentImageLink =
     "https://raw.githubusercontent.com/Nbioni/portfolio/main/assets/images/light.png";
