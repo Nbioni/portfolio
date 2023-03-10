@@ -32,7 +32,7 @@ jobs:
       run: flutter pub get
       
     - name: Build web app
-      run: flutter build web --release --base-href="/portfolio/"
+      run: flutter build web --web-renderer html --release --base-href="/portfolio/"
 
     - name: Setup GitHub Pages
       uses: actions/configure-pages@v3
