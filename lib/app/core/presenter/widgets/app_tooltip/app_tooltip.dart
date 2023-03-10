@@ -25,8 +25,8 @@ class AppTooltip extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: AppBorderRadius.m,
         gradient: LinearGradient(colors: [
-          AppColors.lightBlue.withOpacity(0.2),
-          AppColors.lightBlue.withOpacity(0.18),
+          AppColors.black.withOpacity(0.9),
+          AppColors.black.withOpacity(0.8),
         ]),
       ),
       padding: AppEdgeInsets.xxs,
@@ -34,6 +34,7 @@ class AppTooltip extends StatelessWidget {
       margin: margin,
       textStyle: GoogleFonts.actor(
         fontSize: 14,
+        color: AppColors.whiteBackground.withOpacity(0.8),
       ),
       child: child,
     );
