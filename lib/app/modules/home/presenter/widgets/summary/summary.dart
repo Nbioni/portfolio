@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:url_launcher/url_launcher.dart';
+
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:js' as js;
 
 import '../../../../../core/presenter/widgets/app_text/app_rich_text.dart';
 import '../../../../../core/presenter/widgets/app_text/app_text.dart';
@@ -157,12 +159,8 @@ class Summary extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             OutlinedButton(
-              onPressed: () {
-                final Uri pdfUri = Uri(
-                  path: curriculumNahalielLink,
-                );
-                launchUrl(pdfUri);
-              },
+              onPressed: () =>
+                  js.context.callMethod('open', [curriculumNahalielLink]),
               child: Padding(
                 padding: AppEdgeInsets.xs,
                 child: const AppText.text(
