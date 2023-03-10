@@ -4,6 +4,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../../../core/presenter/widgets/animated_background/animated_background.dart';
 import '../../../../core/presenter/widgets/app_scaffold/app_scaffold.dart';
+import '../../../../core/utils/extensions/app_scroll_behavior.dart';
 import '../controllers/home_controller.dart';
 import '../widgets/avatar_model_viewer/avatar_model_viewer.dart';
 import './session0.dart';
@@ -41,28 +42,34 @@ class _HomeViewState extends State<HomeView> {
                 ),
               ),
             ),
-            Listener(
-              onPointerSignal: (pointerSignal) {
-                if (pointerSignal is PointerScrollEvent) {
-                  _homeController.onScrollEvent(pointerSignal);
-                }
+            GestureDetector(
+              onVerticalDragUpdate: (details) {
+                _homeController.onScrollEvent(-details.delta.dy);
               },
-              child: PageView(
-                controller: _homeController.pageController,
-                scrollDirection: Axis.vertical,
-                padEnds: false,
-                physics: const NeverScrollableScrollPhysics(),
-                children: [
-                  Session0(
-                    backgroundColor: _homeController.backgroundColor,
-                    onJumpClick: () {
-                      _homeController.setCurrentSession(1);
-                      _homeController.jumpToSession1();
-                    },
-                  ),
-                  const Session1(),
-                  Session2(homeController: _homeController),
-                ],
+              child: Listener(
+                onPointerSignal: (pointerSignal) {
+                  if (pointerSignal is PointerScrollEvent) {
+                    _homeController.onScrollEvent(pointerSignal.scrollDelta.dy);
+                  }
+                },
+                child: PageView(
+                  controller: _homeController.pageController,
+                  scrollDirection: Axis.vertical,
+                  padEnds: false,
+                  physics: const NeverScrollableScrollPhysics(),
+                  scrollBehavior: AppScrollBehavior(),
+                  children: [
+                    Session0(
+                      backgroundColor: _homeController.backgroundColor,
+                      onJumpClick: () {
+                        _homeController.setCurrentSession(1);
+                        _homeController.jumpToSession1();
+                      },
+                    ),
+                    const Session1(),
+                    Session2(homeController: _homeController),
+                  ],
+                ),
               ),
             ),
           ],

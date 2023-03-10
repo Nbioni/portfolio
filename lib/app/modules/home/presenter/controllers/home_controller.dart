@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
@@ -35,9 +34,9 @@ abstract class HomeControllerBase with Store {
   @action
   void setCurrentSession(int value) => currentSession = value;
 
-  void onScrollEvent(PointerScrollEvent pointerSignal) {
+  void onScrollEvent(double scrollDeltaDY) {
     if (isScrolling) return;
-    if (pointerSignal.scrollDelta.dy > 0) {
+    if (scrollDeltaDY > 0) {
       // --- scrolling down ---
       if (currentSession == 0) {
         setCurrentSession(1);
@@ -46,7 +45,7 @@ abstract class HomeControllerBase with Store {
         setCurrentSession(2);
         jumpToSession2();
       }
-    } else if (pointerSignal.scrollDelta.dy < 0) {
+    } else if (scrollDeltaDY < 0) {
       if (currentSession == 1 || currentSession == 2) {
         int newCurrentSession = currentSession - 1;
         setCurrentSession(newCurrentSession);
