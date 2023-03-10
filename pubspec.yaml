@@ -37,6 +37,9 @@ flutter:
   assets:
     - assets/
     - assets/animations/
+    - assets/animations/developer.json
+    - assets/animations/flutter-animation.json
+    - assets/animations/flutter.json
     - assets/documents/
     - assets/documents/Curriculum-Nahaliel.pdf
     - assets/images/
