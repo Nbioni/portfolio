@@ -5,6 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../../../../core/presenter/widgets/app_text/app_rich_text.dart';
 import '../../../../../core/presenter/widgets/app_text/app_text.dart';
 import '../../../../../core/presenter/widgets/app_tooltip/app_tooltip.dart';
+import '../../../../../core/utils/constants/link_constants.dart';
 import '../../../../../core/utils/definitions/colors.dart';
 import '../../../../../core/utils/definitions/spacing.dart';
 import '../../../../../core/utils/definitions/typography.dart';
@@ -158,7 +159,7 @@ class Summary extends StatelessWidget {
             OutlinedButton(
               onPressed: () {
                 final Uri pdfUri = Uri(
-                  path: 'assets/documents/Curriculum-Nahaliel.pdf',
+                  path: curriculumNahalielLink,
                 );
                 launchUrl(pdfUri);
               },
