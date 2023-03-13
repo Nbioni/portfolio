@@ -14,7 +14,7 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="https://nbioni.com/">
+  <base href="/">
 
   <meta charset="utf-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -42,9 +42,26 @@
   <script src="flutter.js" defer></script>
   
   <script type="module" src="./assets/packages/model_viewer_plus/assets/model-viewer.min.js" defer></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-3.6.4.min.js"></script>
 </head>
-<body>
-  <script>
+<body class="welcome">
+
+  <span id="splash-overlay" class="splash hide"></span>
+  <span id="welcome" class="z-depth-4 hide"></span>
+
+  
+  <div class="center welcome-wrapper">
+    <script src="js/animated_background.js"></script>
+    <h1>Welcome to my portfolio</h1>
+    <h2>Tap to continue</h2>
+  </div>
+
+ <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({

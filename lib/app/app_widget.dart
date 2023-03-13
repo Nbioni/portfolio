@@ -4,16 +4,24 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/app/core/utils/definitions/colors.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-class AppWidget extends StatelessWidget {
+class AppWidget extends StatefulWidget {
   const AppWidget({Key? key}) : super(key: key);
 
+  @override
+  State<AppWidget> createState() => _AppWidgetState();
+}
+
+class _AppWidgetState extends State<AppWidget> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
       theme: ThemeData(
-          useMaterial3: true,
-          textTheme: GoogleFonts.ubuntuTextTheme(),
-          colorSchemeSeed: AppColors.blue),
+        useMaterial3: true,
+        textTheme: GoogleFonts.ubuntuTextTheme(),
+        scaffoldBackgroundColor: AppColors.darkBackground,
+        colorSchemeSeed: AppColors.blue,
+        brightness: Brightness.dark,
+      ),
       routeInformationParser: Modular.routeInformationParser,
       routerDelegate: Modular.routerDelegate,
       debugShowCheckedModeBanner: false,

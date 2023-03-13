@@ -1,7 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:portfolio/app/core/utils/definitions/colors.dart';
 
 import '../../../../core/presenter/widgets/animated_background/animated_background.dart';
 import '../../../../core/presenter/widgets/app_scaffold/app_scaffold.dart';

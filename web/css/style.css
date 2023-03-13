@@ -1,0 +1,226 @@
+
+html {
+  height: 100%
+}
+canvas {
+  background-color: #1a1c2e;
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #1a1c2e;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Ubuntu' , sans-serif;
+  color: #fff;
+}
+
+.welcome-wrapper{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Ubuntu' , sans-serif;
+  color: #fff;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 5%;
+  animation: showOpacity 5s ;
+}
+h2 {
+  font-size: 1rem;
+  text-align: center;
+  padding-top: 5%;
+  animation: showAndHidepacity 2s infinite alternate;
+}
+
+@keyframes showOpacity {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@keyframes showAndHidepacity {
+  0% {opacity:0;}
+  50% {opacity:0.4;}
+  100% {opacity:0.8;}
+}
+
+.hide{
+  display: none;
+}
+.remove-pointer-events{
+  pointer-events: none;
+}
+.cursor-click{
+
+}
+
+#splash-overlay{
+  position: absolute;
+  z-index: 3;
+}
+
+#welcome{
+  position: absolute;
+  z-index: 2;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* start welcome animation */
+body.welcome {
+  background: #1a1c2e;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.welcome .splash {
+  height: 0px;
+  padding: 0px;
+  border: 130em solid #090a15;
+  position: fixed;
+  left: 50%;
+  top: 100%;
+  box-sizing: initial;
+  overflow: hidden;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards;
+}
+
+.welcome #welcome {
+  z-index: 4;
+  background: #3764c6 ;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards, hide 2s 2.9s ease forwards;
+}
+
+/* moveIn */
+.welcome header,
+.welcome a.btn {
+  opacity: 0;
+  animation: moveIn 2s 3.1s ease forwards;
+}
+
+@keyframes init {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 70px;
+    height: 70px;
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes puff {
+  0% {
+    top: 100%;
+    height: 0px;
+    padding: 0px;
+  }
+  100% {
+    top: 50%;
+    height: 100%;
+    padding: 0px 100%;
+    display: none;
+    pointer-events: none;
+  }
+}
+
+@keyframes borderRadius {
+  0% {
+    border-radius: 50%;
+  }
+  100% {
+    border-radius: 0px;
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    top: 50%;
+  }
+  50% {
+    top: 40%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    background: #3d76f1;
+    top: 100%;
+  }
+  50% {
+    top: 40%;
+  }
+  100% {
+    top: 50%;
+    background: #3d76f1;
+  }
+}
+
+@keyframes materia {
+  0% {
+    background: #345293;
+  }
+  50% {
+    background: #20233c;
+    top: 26px;
+  }
+  100% {
+    background: #0e0f1a;
+    width: 100%;
+    height: 86px;
+    border-radius: 0px;
+    top: 26px;
+    display: none;
+    pointer-events: none;
+  }
+}
+
+@keyframes moveIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+} 
