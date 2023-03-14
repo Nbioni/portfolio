@@ -61,9 +61,13 @@ const init = () => {
     document.getElementById("animated_background").remove();
     document.body.classList.add("remove-pointer-events");
     document.body.removeEventListener('click', clickHandler);
-    return;
- }
 
+    setTimeout(()=> {
+      document.body.classList.remove("remove-pointer-events");
+    }
+    ,4000);
+    return;
+  }
 }
 
 
@@ -157,20 +161,18 @@ const draw = () => {
 
 const bindMouseMove = () => {
   listener = document.addEventListener('mousemove', e => {
-    //document.removeEventListener('mousemove', listener);
     mousePos.x = e.clientX;
     mousePos.y = e.clientY;
-    //bindMouseMove();
   });
 }
 init();
 
 window.addEventListener('resize', () => {
-
   if($('.welcome-wrapper').hasClass("hide"))
     return;
   init();
 });
-  requestAnimationFrame(() => {
-    draw();
-  });
+
+requestAnimationFrame(() => {
+  draw();
+});
