@@ -23,6 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   color: #fff;
+  -webkit-tap-highlight-color: transparent;
 }
 #html-layer{
   font-family: 'Ubuntu' , sans-serif;

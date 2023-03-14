@@ -26,8 +26,8 @@ class Summary extends StatelessWidget {
   final String authentic = 'authentic';
   final String communicative = 'communicative';
   final String sumary2 =
-      ", and I'm always excited to continue growing my skills and "
-      "contributing to the success of international technology companies.";
+      ". I'm always excited about growing my skills, learning, and contributing to the success "
+      "of international technology companies.";
 
   final String education1 = "• Executive MBA in I.T. Management";
   final String education1Place = " - IPOG";
