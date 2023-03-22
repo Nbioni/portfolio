@@ -17,12 +17,18 @@ class AppTypography {
     fontSize: 20,
     fontWeight: FontWeight.bold,
   );
-  static TextStyle reference = TextStyle(
-      color: AppColors.whiteBackground.withOpacity(0.4), fontSize: 14);
   static TextStyle text = TextStyle(
     color: AppColors.whiteBackground,
     fontSize: 18,
   );
+  static TextStyle text2 = TextStyle(
+    color: AppColors.whiteBackground,
+    fontSize: 16,
+  );
+  static TextStyle reference = TextStyle(
+      color: AppColors.whiteBackground.withOpacity(0.4), fontSize: 14);
+  static TextStyle reference2 = TextStyle(
+      color: AppColors.whiteBackground.withOpacity(0.4), fontSize: 12);
 }
 
 enum TextTypeEnum {
@@ -30,6 +36,8 @@ enum TextTypeEnum {
   pageSubtitle,
   sectionHeader1,
   sectionHeader2,
-  reference,
   text,
+  text2,
+  reference,
+  reference2,
 }

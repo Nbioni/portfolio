@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
-// ignore: avoid_web_libraries_in_flutter
-import 'dart:js' as js;
-
 import '../../../../../core/presenter/widgets/app_text/app_rich_text.dart';
 import '../../../../../core/presenter/widgets/app_text/app_text.dart';
 import '../../../../../core/presenter/widgets/app_tooltip/app_tooltip.dart';
-import '../../../../../core/utils/constants/link_constants.dart';
 import '../../../../../core/utils/definitions/colors.dart';
 import '../../../../../core/utils/definitions/spacing.dart';
 import '../../../../../core/utils/definitions/typography.dart';
+import '../curriculum_button/curriculum_button.dart';
 
 class Summary extends StatelessWidget {
-  Summary({super.key, required this.isMobile});
+  const Summary({super.key, required this.isMobile});
   final bool isMobile;
 
   final String sumary1 =
@@ -41,8 +38,11 @@ class Summary extends StatelessWidget {
   final String skills2Place =
       " - Pontifícia Universidade Católica de Goiás - February 2019.";
 
-  final TextStyle textStyle = AppTypography.text
-      .copyWith(color: AppTypography.text.color?.withOpacity(0.8));
+  TextStyle _getTextStyle() => isMobile
+      ? AppTypography.text2
+          .copyWith(color: AppTypography.text.color?.withOpacity(0.8))
+      : AppTypography.text
+          .copyWith(color: AppTypography.text.color?.withOpacity(0.8));
 
   final Duration titleAnimationDuration = const Duration(milliseconds: 300);
 
@@ -97,7 +97,7 @@ class Summary extends StatelessWidget {
           textAlign: TextAlign.justify,
           child: SelectionArea(
             child: AppRichText(
-              style: textStyle,
+              style: _getTextStyle(),
               children: [
                 AppText.text(
                   sumary1.replaceFirst('{getYearsOfWork}', getYearsOfWork),
@@ -125,7 +125,7 @@ class Summary extends StatelessWidget {
         _getTitle("Education"),
         isMobile ? AppSizedBox.xs : AppSizedBox.m,
         AppRichText(
-          style: textStyle,
+          style: _getTextStyle(),
           children: [
             AppText.text(education1),
             AppText.reference(education1Place,
@@ -155,22 +155,14 @@ class Summary extends StatelessWidget {
         ),
         isMobile ? AppSizedBox.l : AppSizedBox.xxl,
         const Expanded(child: SizedBox()),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            OutlinedButton(
-              onPressed: () =>
-                  js.context.callMethod('open', [curriculumNahalielLink]),
-              child: Padding(
-                padding: AppEdgeInsets.xs,
-                child: const AppText.text(
-                  'Curriculum Vitae (PDF)',
-                  selectable: false,
-                ),
+        isMobile
+            ? const SizedBox.shrink()
+            : Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CurriculumButton(isMobile: isMobile),
+                ],
               ),
-            ),
-          ],
-        ),
         const Expanded(child: SizedBox()),
       ],
     );

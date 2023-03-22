@@ -10,6 +10,7 @@ import '../widgets/avatar_model_viewer/avatar_model_viewer.dart';
 import './session0.dart';
 import './session1.dart';
 import './session2.dart';
+import './session3.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -72,6 +73,7 @@ class _HomeViewState extends State<HomeView> {
                       ),
                       const Session1(),
                       Session2(homeController: _homeController),
+                      Session3(homeController: _homeController),
                     ],
                   ),
                 ),

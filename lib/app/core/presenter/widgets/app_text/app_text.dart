@@ -40,14 +40,6 @@ class AppText extends StatelessWidget {
     this.selectable = true,
   }) : textTypeEnum = TextTypeEnum.sectionHeader2;
 
-  const AppText.reference(
-    this.text, {
-    super.key,
-    this.textAlign = TextAlign.right,
-    this.textStyle,
-    this.selectable = true,
-  }) : textTypeEnum = TextTypeEnum.reference;
-
   const AppText.text(
     this.text, {
     super.key,
@@ -56,6 +48,30 @@ class AppText extends StatelessWidget {
     this.selectable = true,
   }) : textTypeEnum = TextTypeEnum.text;
 
+  const AppText.text2(
+    this.text, {
+    super.key,
+    this.textAlign,
+    this.textStyle,
+    this.selectable = true,
+  }) : textTypeEnum = TextTypeEnum.text2;
+
+  const AppText.reference(
+    this.text, {
+    super.key,
+    this.textAlign = TextAlign.right,
+    this.textStyle,
+    this.selectable = true,
+  }) : textTypeEnum = TextTypeEnum.reference;
+
+  const AppText.reference2(
+    this.text, {
+    super.key,
+    this.textAlign = TextAlign.right,
+    this.textStyle,
+    this.selectable = true,
+  }) : textTypeEnum = TextTypeEnum.reference2;
+
   @override
   Widget build(BuildContext context) {
     Map<TextTypeEnum, TextStyle> stylesPerType = {
@@ -63,8 +79,10 @@ class AppText extends StatelessWidget {
       TextTypeEnum.pageSubtitle: AppTypography.pageSubtitle,
       TextTypeEnum.sectionHeader1: AppTypography.sectionHeader1,
       TextTypeEnum.sectionHeader2: AppTypography.sectionHeader2,
-      TextTypeEnum.reference: AppTypography.reference,
       TextTypeEnum.text: AppTypography.text,
+      TextTypeEnum.text2: AppTypography.text2,
+      TextTypeEnum.reference: AppTypography.reference,
+      TextTypeEnum.reference2: AppTypography.reference2,
     };
     Text result = Text(
       text,
