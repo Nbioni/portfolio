@@ -1,0 +1,41 @@
+#ui {
+  text-align: start;
+  align-self: flex-start;
+  padding-top: 40px;
+  .text {
+    position: absolute;
+    font-size: 5rem;
+    line-height: 5rem;
+    mix-blend-mode: screen;
+    letter-spacing: 1rem;
+    font-weight:bold;
+
+    @for $i from 0 through 100 {
+      $key: $i + 1;
+      &:nth-child(#{$key}) {
+        $row: calc($i / 20);
+        // color: rgba(random(155) + 100, random(155) + 100, random(55), 1);
+        color: rgba(random(30), random(100), random(155) + 100, 1);
+        animation: clip#{$i} random(10000) + 10000ms ease-in-out infinite alternate;
+        filter: blur(#{random(15) - 10}px);
+        @keyframes clip#{$i} {
+          0% {
+            clip-path: circle(random(150) + 30px at random(160) - 30% random(160) - 30%);
+          }
+          25% {
+            clip-path: circle(random(150) + 30px at random(160) - 30% random(160) - 30%);
+          }
+          50% {
+            clip-path: circle(random(150) + 30px at random(160) - 30% random(160) - 30%);
+          }
+          75% {
+            clip-path: circle(random(150) + 30px at random(160) - 30% random(160) - 30%);
+          }
+          100% {
+            clip-path: circle(random(150) + 30px at random(160) - 30% random(160) - 30%);
+          }
+        }
+      }
+    }
+  }
+}

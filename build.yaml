@@ -1,0 +1,9 @@
+targets:
+  $default:
+    builders:
+      sass_builder:
+        enabled: true
+        options:
+          includePaths:
+            - web/styles/
+          outputStyle: compressed
