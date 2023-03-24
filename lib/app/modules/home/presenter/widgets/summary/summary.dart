@@ -90,7 +90,7 @@ class Summary extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _getTitle("Sumary"),
+        _getTitle("Summary"),
         isMobile ? AppSizedBox.xs : AppSizedBox.m,
         DefaultTextStyle(
           style: AppTypography.text,
