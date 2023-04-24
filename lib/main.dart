@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 // ignore: depend_on_referenced_packages
 import 'package:flutter_web_plugins/url_strategy.dart';
 
+import './firebase_options.dart';
 import './app/app_module.dart';
 import './app/app_widget.dart';
 
-void main() {
+void main() async {
   usePathUrlStrategy();
+  await dotenv.load();
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.current,
+  );
   runApp(ModularApp(module: AppModule(), child: const AppWidget()));
 }
