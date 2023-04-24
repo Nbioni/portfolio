@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "712363500669",
+    "project_id": "nbioni",
+    "storage_bucket": "nbioni.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712363500669:android:c74b02688a2893a7cb7d14",
+        "android_client_info": {
+          "package_name": "com.example.portfolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "712363500669-7227715j3l2dugbq9g9k7c7uff0g5ftq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWKgUCE7Hz0R2EOStyS3nfpTIVMI5R5x8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "712363500669-7227715j3l2dugbq9g9k7c7uff0g5ftq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
