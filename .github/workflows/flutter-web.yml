@@ -30,6 +30,20 @@ jobs:
         
     - name: Install dependencies
       run: flutter pub get
+
+    - name: Create env file
+      uses: SpicyPizza/create-envfile@v1.3
+      with:
+        envkey_API_KEY: ${{ vars.API_KEY }}
+        envkey_APP_ID: ${{ vars.APP_ID }}
+        envkey_MESSAGING_SENDER_ID: ${{ vars.MESSAGING_SENDER_ID }}
+        envkey_PROJECT_ID: ${{ vars.PROJECT_ID }}
+        envkey_AUTH_DOMAIN: ${{ vars.AUTH_DOMAIN }}
+        envkey_STORAGE_BUCKET: ${{ vars.STORAGE_BUCKET }}
+        envkey_MEASUREMENT_ID: ${{ vars.MEASUREMENT_ID }}
+        directory: portfolio
+        file_name: .env
+        fail_on_empty: true
       
     - name: Build web app
       run: flutter build web --web-renderer canvaskit --release
