@@ -41,6 +41,8 @@ jobs:
         echo "DATABASE_URL=${{secrets.DATABASE_URL}}" >> $GITHUB_WORKSPACE/portfolio/.env
         echo "STORAGE_BUCKET=${{secrets.STORAGE_BUCKET}}" >> $GITHUB_WORKSPACE/portfolio/.env
         echo "MEASUREMENT_ID=${{secrets.MEASUREMENT_ID}}" >> $GITHUB_WORKSPACE/portfolio/.env
+      env:
+        GITHUB_WORKSPACE: ${{github.workspace}}
       working-directory: $GITHUB_WORKSPACE
       
     - name: Build web app
