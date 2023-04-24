@@ -53,4 +53,5 @@ flutter:
     - assets/images/light.png
     - assets/objects/
     - assets/objects/profile.gltf
+    - .env
     
