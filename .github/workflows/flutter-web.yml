@@ -31,15 +31,9 @@ jobs:
     - name: Install dependencies
       run: flutter pub get
 
-    - name: Create env file
-      uses: SpicyPizza/create-envfile@v1.3
-      with:
-        file_name: .env
-        fail_on_empty: false
-
     - name: Getting secrets
       run: |
-        sudo chown $USER:$USER ${{github.workspace}}/.env
+        touch ${{github.workspace}}/.env
         echo "API_KEY=${{secrets.API_KEY}}" >> ${{github.workspace}}/.env
         echo "APP_ID=${{secrets.APP_ID}}" >> ${{github.workspace}}/.env
         echo "MESSAGING_SENDER_ID=${{secrets.MESSAGING_SENDER_ID}}" >> ${{github.workspace}}/.env
