@@ -18,7 +18,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.current,
   );
-  // ignore: unused_local_variable
   FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+  await analytics.logAppOpen();
   runApp(ModularApp(module: AppModule(), child: const AppWidget()));
 }
