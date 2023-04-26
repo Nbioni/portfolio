@@ -34,7 +34,7 @@ jobs:
     - name: Create env file
       uses: SpicyPizza/create-envfile@v1.3
       with:
-        directory: <./
+        directory: ${{github.workspace}}
         file_name: .env
         fail_on_empty: false
 
@@ -48,6 +48,7 @@ jobs:
         echo "DATABASE_URL=${{secrets.DATABASE_URL}}" >> ${{github.workspace}}/.env
         echo "STORAGE_BUCKET=${{secrets.STORAGE_BUCKET}}" >> ${{github.workspace}}/.env
         echo "MEASUREMENT_ID=${{secrets.MEASUREMENT_ID}}" >> ${{github.workspace}}/.env
+        echo ls
       
     - name: Build web app
       run: flutter build web --web-renderer canvaskit --release
