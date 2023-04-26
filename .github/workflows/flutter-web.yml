@@ -37,7 +37,7 @@ jobs:
 
     - name: Create env file
       run: |
-        echo "The value of API_KEY is $API_KEY"
+        echo "My Workspace is ${{github.workspace}}"
         echo "API_KEY=${{secrets.API_KEY}}" >> ${{github.workspace}}/.env
         echo "APP_ID=${{secrets.APP_ID}}" >> ${{github.workspace}}/.env
         echo "MESSAGING_SENDER_ID=${{secrets.MESSAGING_SENDER_ID}}" >> ${{github.workspace}}/.env
