@@ -31,21 +31,21 @@ jobs:
     - name: Install dependencies
       run: flutter pub get
 
-
-    - name: rint Environment Variables
-      run: env
-
     - name: Create env file
+      with:
+        directory: ./
+        file_name: .env
+        
+    - name: Getting secrets
       run: |
-        echo "My Workspace is ${{github.workspace}}"
-        echo "API_KEY=${{secrets.API_KEY}}" >> ${{github.workspace}}/.env
-        echo "APP_ID=${{secrets.APP_ID}}" >> ${{github.workspace}}/.env
-        echo "MESSAGING_SENDER_ID=${{secrets.MESSAGING_SENDER_ID}}" >> ${{github.workspace}}/.env
-        echo "PROJECT_ID=${{secrets.PROJECT_ID}}" >> ${{github.workspace}}/.env
-        echo "AUTH_DOMAIN=${{secrets.AUTH_DOMAIN}}" >> ${{github.workspace}}/.env
-        echo "DATABASE_URL=${{secrets.DATABASE_URL}}" >> ${{github.workspace}}/.env
-        echo "STORAGE_BUCKET=${{secrets.STORAGE_BUCKET}}" >> ${{github.workspace}}/.env
-        echo "MEASUREMENT_ID=${{secrets.MEASUREMENT_ID}}" >> ${{github.workspace}}/.env
+        echo "API_KEY=${{secrets.API_KEY}}" >> ./.env
+        echo "APP_ID=${{secrets.APP_ID}}" >> ./.env
+        echo "MESSAGING_SENDER_ID=${{secrets.MESSAGING_SENDER_ID}}" >> ./.env
+        echo "PROJECT_ID=${{secrets.PROJECT_ID}}" >> ./.env
+        echo "AUTH_DOMAIN=${{secrets.AUTH_DOMAIN}}" >> ./.env
+        echo "DATABASE_URL=${{secrets.DATABASE_URL}}" >> ./.env
+        echo "STORAGE_BUCKET=${{secrets.STORAGE_BUCKET}}" >> ./.env
+        echo "MEASUREMENT_ID=${{secrets.MEASUREMENT_ID}}" >> ./.env
       
     - name: Build web app
       run: flutter build web --web-renderer canvaskit --release
