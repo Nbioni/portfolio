@@ -48,7 +48,7 @@ jobs:
         echo "DATABASE_URL=${{secrets.DATABASE_URL}}" >> ${{github.workspace}}/.env
         echo "STORAGE_BUCKET=${{secrets.STORAGE_BUCKET}}" >> ${{github.workspace}}/.env
         echo "MEASUREMENT_ID=${{secrets.MEASUREMENT_ID}}" >> ${{github.workspace}}/.env
-        echo ls ${{github.workspace}}
+        ls ${{github.workspace}}
       
     - name: Build web app
       run: flutter build web --web-renderer canvaskit --release
