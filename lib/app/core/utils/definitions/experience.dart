@@ -33,7 +33,7 @@ class MyExperience {
           company: 'Codelitt',
           companyMobile: 'Codelitt',
           companyImageUrl:
-              'https://media.licdn.com/dms/image/C4E0BAQFNOAqn5rDz0A/company-logo_100_100/0/1561664918575?e=1687392000&v=beta&t=yQ-C2wD1Drd7jI3EJyC0Rhd42q5g3lo2oM8yH1ZMbpc',
+              'https://media.licdn.com/dms/image/C4E0BAQFNOAqn5rDz0A/company-logo_100_100/0/1561664918575?e=1700092800&v=beta&t=11f_vJW1RVSvYLPX3IFg17MistF7F4sYVFktN9eiGDk',
           description:
               '• Developed a modular Flutter project using clean architecture and an Atomic Design System.\n'
               '• Built a Chrome extension using the Design System in Flutter\n'
@@ -48,7 +48,7 @@ class MyExperience {
           company: 'Trinus Co.',
           companyMobile: 'Trinus Co.',
           companyImageUrl:
-              'https://media.licdn.com/dms/image/C4D0BAQG0FbtYrTNa0A/company-logo_100_100/0/1669640130257?e=1687392000&v=beta&t=WsDu5DBAE1Q45G2tS82KF4RML8YHLACpNm2D-YtGsqQ',
+              'https://media.licdn.com/dms/image/C4D0BAQG0FbtYrTNa0A/company-logo_100_100/0/1669640130257?e=1700092800&v=beta&t=PwpKDx3okJyl_RGEfqN7PtoMwPzSdIaP7cNAEqO5670',
           description:
               '• Led a team in developing a backend solution in NestJS with Prisma ORM and a website in Flutter\n'
               '• Implemented Clean Architecture patterns and the Flutter Modular architecture made by the Flutterando community',
@@ -62,7 +62,7 @@ class MyExperience {
           company: 'K2 Improving Performance Consultoria',
           companyMobile: 'K2 Improving Performance\nConsultoria',
           companyImageUrl:
-              'https://media.licdn.com/dms/image/C4E0BAQGpPCXvC1NB1w/company-logo_100_100/0/1519873940618?e=1687392000&v=beta&t=w6WrIO57DemKcbts_yhy7aT6PSomKJGDSbj9RixAibU',
+              'https://media.licdn.com/dms/image/C4E0BAQGpPCXvC1NB1w/company-logo_100_100/0/1519873940618?e=1700092800&v=beta&t=K38uzIfzG22kK4yzu7K3yTo12YNnf2cVBzb9bufd0r0',
           description:
               '• Developed management and payment solutions using .NET',
           skills:
@@ -75,7 +75,7 @@ class MyExperience {
           company: 'TOCTEC',
           companyMobile: 'TOCTEC',
           companyImageUrl:
-              'https://media.licdn.com/dms/image/C560BAQEppnGo7Vgw-A/company-logo_100_100/0/1519883557641?e=1687392000&v=beta&t=XcRY1vIsikUGOSG4xCR83Pfl0Yk4o5kJJVs5ZjpzF70',
+              'https://media.licdn.com/dms/image/C560BAQEppnGo7Vgw-A/company-logo_100_100/0/1519883557641?e=1700092800&v=beta&t=DhgezJu1paQxv9b0nPaiGaJb8LW5VcG58ZxwBD-U4yg',
           description:
               '• Developed plugins for the BIM tool, web systems, and mobile applications (Flutter) for civil construction',
           skills: 'Building Information Modeling (BIM) · Flutter'),
@@ -100,7 +100,7 @@ class MyExperience {
           company: 'Rede Frota',
           companyMobile: 'Rede Frota',
           companyImageUrl:
-              'https://media.licdn.com/dms/image/C4D0BAQF6gUYNJbfQlA/company-logo_100_100/0/1641303306018?e=1687392000&v=beta&t=k1u0E4TV-SJall92QTI3NCJ8LnYCqS_vUWj0EIxCDk4',
+              'https://media.licdn.com/dms/image/C4D0BAQF6gUYNJbfQlA/company-logo_100_100/0/1641303306018?e=1700092800&v=beta&t=DJ1_i6XaLEZA956GZgz0xKoxXoMZiGUa569pYEgjHBQ',
           description: '• Developed web solutions using Angular + TypeScript\n'
               '• Developed backend solutions using C#',
           skills:
@@ -113,7 +113,7 @@ class MyExperience {
           company: 'InfinIT Tecnologia',
           companyMobile: 'InfinIT Tecnologia',
           companyImageUrl:
-              'https://media.licdn.com/dms/image/C4D0BAQFQaac4VWakaw/company-logo_100_100/0/1519890908961?e=1687392000&v=beta&t=9zUiH5qKRAmYsxEVqzi8_Jk90DKMkizg8MgLZ1wsWUI',
+              'https://media.licdn.com/dms/image/C4D0BAQFQaac4VWakaw/company-logo_100_100/0/1519890908961?e=1700092800&v=beta&t=sCVzran5XekL9I5fZXb2wR9skzv9kTwiFzEMB3b4ZE8',
           description: '• Developed .NET C# system\n'
               '• Developed mobile projects in ReactJS\n'
               '• Conducted monitoring BI consultancies with Qlik Sense',
@@ -127,7 +127,7 @@ class MyExperience {
           company: 'Tribunal de Contas do Estado de Goiás',
           companyMobile: 'Tribunal de Contas do\nEstado de Goiás',
           companyImageUrl:
-              'https://media.licdn.com/dms/image/C4E0BAQFife06jIe_Lg/company-logo_100_100/0/1673267924213?e=1687392000&v=beta&t=BU9IbY6Ytf5ps7yPBBQqrbiE2c0efGUtNqRScxlTya8',
+              'https://media.licdn.com/dms/image/C4E0BAQFife06jIe_Lg/company-logo_100_100/0/1673267924213?e=1700092800&v=beta&t=W0jRzcoyyzI4OHpMWGg5k04G_6F4qm3AEcwy-lfnk5I',
           description:
               '• Developed .NET solutions in C# using layered architecture, MVC, and Oracle PL/ SQL database\n'
               '• Worked on maintenance of legacy systems in VB6',
