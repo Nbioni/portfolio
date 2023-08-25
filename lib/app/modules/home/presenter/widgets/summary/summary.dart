@@ -142,14 +142,15 @@ class Summary extends StatelessWidget {
         Wrap(
           spacing: AppSpacing.xl,
           children: [
+            _getSkillImage('assets/images/react.png', 'React', 2),
+            _getSkillImage('assets/images/vue.png', 'Vue.js', 1),
+            _getSkillImage('assets/images/flutter.png', 'Flutter', 3),
+            _getSkillImage('assets/images/nest.png', 'Nest.js', 1),
             _getSkillImage('assets/images/c_sharp.png', 'C Sharp', 4),
             _getSkillImage('assets/images/css3.png', 'CSS', 4),
-            _getSkillImage('assets/images/dart.png', 'Dart', 3),
-            _getSkillImage('assets/images/flutter.png', 'Flutter', 3),
             _getSkillImage('assets/images/html5.png', 'HTML', 4),
             _getSkillImage('assets/images/javascript.png', 'JavaScript', 4),
             _getSkillImage('assets/images/node.png', 'Node.js', 1),
-            _getSkillImage('assets/images/react.png', 'React', 2),
             _getSkillImage('assets/images/typescript.png', 'TypeScript', 1),
           ],
         ),
