@@ -94,7 +94,7 @@ class Session0 extends StatelessWidget {
                       AnimatedTextKit(
                         animatedTexts: [
                           TypewriterAnimatedText(
-                            "Creative frontend developer",
+                            "Creative Software Engineer",
                             textStyle: AppTypography.text,
                             speed: const Duration(milliseconds: 100),
                           ),
@@ -105,9 +105,9 @@ class Session0 extends StatelessWidget {
                         repeatForever: false,
                       ),
                       const Expanded(child: SizedBox()),
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.end,
-                        children: const [
+                        children: [
                           AppText.reference(
                               '"Intelligence is the ability to adapt to change." \n~Stephen Hawking'),
                         ],

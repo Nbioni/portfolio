@@ -6,9 +6,7 @@ function onDiscoverButtonClick(e) {
     $('#welcome').addClass("remove-pointer-events");
     $('.welcome-wrapper').addClass("hide");
     $('#html-layer').removeClass("override-app");
-    document.getElementById("animated_background").remove();
     document.body.classList.add("remove-pointer-events");
-    document.body.removeEventListener('click', clickHandler);
     setTimeout(()=> {
       document.body.classList.remove("remove-pointer-events");
     }
